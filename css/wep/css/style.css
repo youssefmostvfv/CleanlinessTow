@@ -1,0 +1,451 @@
+ده /* ========== start general fix ========== */
+body {
+  overflow-x: hidden; /* 📌 يمنع الكسر الجانبي */
+}
+/* ========== end general fix ========== */
+
+/* ========== start navbar ========== */
+.navbar {
+  background-color: transparent;
+  padding: 10px 20px;
+  position: absolute;
+  width: 100%;
+}
+
+.photo-logo {
+  height: 60px;
+  transition: 0.3s ease-in-out; 
+}
+.photo-logo:hover {
+  filter: drop-shadow(0 0 10px #0dcaf0); 
+}
+
+.nav-link {
+  color: #fff;
+}
+#navbarSupportedContent {
+  font-size: 25px;
+  padding: 15px;
+  font-weight: bold;
+  color: aliceblue;
+}
+.nav-link:hover {
+  text-decoration: underline;
+  color: #000000;
+  transition: 0.2s ease-in-out;
+}
+/* ========== end navbar ========== */
+
+/* ========== start hero-section ========== */
+.hero-section {
+  background-image: url('/photo/photo-1542640244-7e672d6cef4e.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-right: 50px;
+  text-align: center;
+  color: white;
+  width: 100%; /* ✅ تأكيد عرضها ما يتجاوزش */
+}
+.hero-content {
+  max-width: 40%; 
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  margin-left: 100px;
+  padding: 10px;
+}
+.hero-content:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transform: scale(1.02); 
+  transition: 0.3s ease-in-out;
+}
+.navbar-collapse.show {
+  background-color: rgba(0, 0, 0, 0.3);  /* ✅ لون الخلفية */
+  padding: 15px;              /* ✅ مسافة داخلية */
+  border-radius: 10px;        /* ✅ حواف ناعمة */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ✅ ظل بسيط */
+}
+/* ========== end hero-section ========== */
+
+/* ========== start hero-section media query ========== */
+@media (min-width: 300px) and (max-width: 767px) {
+  .nav .photo-logo {
+    justify-items: start;
+  }
+
+  .hero-section {
+    width: 100%; /* ✅ أصلح كسر التصميم */
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .hero-content {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 18px;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-content {
+    max-width: 50%;
+    margin-left: 70px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hero-content {
+    max-width: 40%;
+    margin-left: 100px;
+  }
+}
+/* ========== end hero-section media query ========== */
+
+/* ========== start Services ========== */
+.Services {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* ✅ حماية إضافية */
+}
+
+.Services .container {
+  width: 40%;
+}
+
+.Services img {
+  width: 100%;         /* ✅ لجعل الصورة متجاوبة */
+  max-width: 400px;
+  margin: 5%;
+  border-radius: 15px;
+}
+
+.Services-title {
+  width: 50%;
+}
+
+.Services-title:hover {
+  background-color: #f6e8e8;
+  color: #000000;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #a9a9a9;
+  transition: 0.6s ease;
+  border-radius: 18px;
+  padding: 5px;
+}
+/* ========== end Services ========== */
+
+/* ========== start Services media query ========== */
+@media (min-width: 300px) and (max-width: 767px) {
+ .Services{
+  display: flex;
+  width: 100%;
+  padding: 10px;
+ }
+ .Services-title h1{
+  font-size:18px ;
+ }
+ .Services-title p{
+  font-size:12px ;
+ }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .Services {
+    display: flex;
+    max-width: 85%;
+    flex-wrap: wrap;
+  }
+
+  .Services-title {
+    justify-content: center;
+    display: grid;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    padding: 50px;
+  }
+
+  .Services-title h1 {
+    font-size: 18px;
+  }
+    .Services img {
+    align-items: center;
+    width: 250px;
+    height: 300px;
+      background-size: cover;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .Services-title {
+    justify-content: start;
+    display: grid;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+  }
+      .Services img {
+    align-items: end;
+    width: 250px;
+    height: 300px;
+      background-size: cover;
+  }
+}
+@media  (min-width: 1200px) {
+
+      .Services-title {
+    justify-content: start;
+    display: grid;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+  }
+      .Services img {
+    align-items: end;
+    width: 250px;
+    height: 300px;
+      background-size: cover;
+  }
+}
+/* ========== end Services media query ========== */
+
+/* ========== start Portfolio   ========== */
+
+
+
+.Portfolio  h1 {
+  font-size: 18px;
+}
+.Portfolio .p-title p {
+  font-size: 12px;
+}
+.Portfolio .container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-size: cover;
+    margin: auto;
+}
+#my-icon {
+  font-size: 100px; 
+  color: #484747;    
+}
+
+/* ========== start Portfolio   ========== */
+.p-portfolio{
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  color: #2f9ff5;
+}
+.h-portfolio{
+  font-size: 40px;
+  text-align: center;
+  padding: 30px;
+  color: #00296b;
+
+}
+
+.Portfolio{
+  background-color: #ffffff;
+  padding: 20px;
+}
+.card{
+  background-color: #caf0f88e;
+  height: 300px;
+}
+.card:hover {
+  background-color: #ade8f4da;
+  color: #000000;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #90e1ef;
+  transition: 0.6s ease;
+  border-radius: 18px;
+  padding: 5px;
+}
+.card-title{
+font-size: 18px;
+padding: 2px;
+}
+
+.card-image{
+  width: 140px;
+  border-radius: 10px;
+  height: 100px;
+}
+.my-hr{
+  width: 90%;
+margin: auto;
+padding: 10px;
+}
+.card-text{
+  font-size: 14px;
+}
+
+.p-portfolio:hover{
+  filter: drop-shadow(0 0 10px #0dcaf0); 
+
+}
+.h-portfolio:hover{
+  filter: drop-shadow(0 0 10px #0dcaf0); 
+}
+
+/* ========== end Portfolio     ========== */
+
+/* ========== end About Us     ========== */
+
+.container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.About-Us .logo-about {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.container-about{
+  height: 90vh;
+  display: flex;
+  background-color: #033773;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+.h1-about{
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.p-about{
+  padding: 20px;
+}
+/* ========== end About Us     ========== */
+
+/* ========== start About Us  media query   ========== */
+@media (min-width: 300px) and (max-width: 767px) {
+    .h1-about{
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.p-about{
+      text-align: start;
+      font-size: 20px;
+}
+.btn-taskey{
+  width: 180px;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 23px;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {}
+@media (min-width: 992px) and (max-width: 1199px) {}
+@media  (min-width: 1200px){}
+/* ========== end About Us  media query   ========== */
+
+
+/* ========== Start Plan Carousel ========== */
+.blog .container{
+  gap: 12px;
+  display: flex;
+}
+/* ========== End Plan Carousel ========== */
+/* ========== end   plan-subscribe  media query   ========== */
+.more-about-us .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  gap: 30px;
+  height: 60vh;
+}
+.more-about-img{
+  width: 200;
+  height: 330px;
+  align-items: start;
+  padding: 5px;
+  border-radius: 10px;
+}
+.more-about-text{
+  font-size: 10px;
+  max-width: 50%;
+
+}
+.more-about-text p{
+  font-size: 18px;
+  color: #033773;
+  padding-top: 10px;
+}
+
+.check-list li {
+  margin-bottom: 10px; /* مسافة تحت كل عنصر */
+  font-size: 14px;      /* حجم الخط */
+  display: flex;        /* علشان الأيقونة والنص يبقوا في سطر واحد */
+  align-items: center;  /* توسيط عمودي */
+  color: #007bff;       /* لون الأيقونة (أزرق) */
+}
+
+.check-list li i {
+  color: #007bff;       /* لون الأيقونة (أزرق) */
+  margin-right: 8px;    /* مسافة بين الأيقونة والنص */
+  font-size: 16px;      /* حجم الأيقونة */
+}
+
+.more-about-text h2{
+  font-size: 29px;
+  font-weight: bold;
+  color: #033773;
+}
+
+/* ========== end   plan-subscribe  media query   ========== */
+@media (min-width: 300px) and (max-width: 767px) {
+  .more-about-us .container {
+    flex-direction: column;
+    text-align: center; 
+    height: auto;  
+    padding: 20px;
+  }
+
+  .more-about-img {
+    width: 80%;    
+    height: auto;  
+    margin-bottom: 20px;
+    align-self: center;  
+  }
+
+  .more-about-text {
+    max-width: 100%;  
+    font-size: 12px;
+  }
+
+  .more-about-text h2 {
+    font-size: 22px;  
+  }
+
+  .check-list li {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,72 @@
+.form-control-dark {
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle:not(:focus) {
+  outline: 0;
+}
+
+@media (min-width: 300px) and (max-width: 767px) {
+  .title-head h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .title-head p{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .btn {
+    width: 100%;
+  }
+  .bottom-3{
+    width: 12px;
+  }
+}
+
+.navbar{
+  background-color: #fff;
+}
+.advantages{
+  padding: 70px;
+}
+.footer-1{
+  padding: 10px;
+}
+
+body {
+  font-family: "Beiruti", sans-serif;
+  background-color: #f8f9fa;
+}
+html {
+  scroll-behavior: smooth;
+}
+.header{
+  background-image: url("/images/ixtR4JdzySzNOZbBcECKfrWdwnzoKLET1622049616.jpg");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  /* padding-right: 50px; */
+  color: white;
+  width: 100%; /* ✅ تأكيد عرضها ما يتجاوزش */
+}
+.shadoow{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(114, 114, 114, .6);
+}
+.advantages-icon{
+  font-size: 30px;
+  padding: 5px;
+}
